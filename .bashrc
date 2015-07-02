@@ -14,5 +14,8 @@ export HISTSIZE=10000
 export HISTCONTROL=erasedups
 shopt -s histappend
 
+# sets directory colors to file in home
+test -r $d && eval "$(dircolors ~/.dir_colors)"
+
 [ -n "$XTERM_VERSION" ] && transset-df -a >/dev/null
 # alias ls="ls | figlet -w0 -t"
